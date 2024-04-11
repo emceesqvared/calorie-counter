@@ -58,13 +58,16 @@ def getFoodInfo(x):
 
 def addToFoodList(d, x, quantity=1):
     x = x.capitalize()
-    for unit, food in foodDatabase.items():
-        for name in food:
-            if x == name:
-                if quantity > 1:
-                    d[name] = food[name] * quantity
-                else:
-                    d[name] = food[name]
+    if searchFood(x):
+        for unit, food in foodDatabase.items():
+            for name in food:
+                if x == name:
+                    if quantity > 1:
+                        d[name] = food[name] * quantity
+                    else:
+                        d[name] = food[name]
+    else:
+        print('This food does not exist in the database.')
 
 
 
