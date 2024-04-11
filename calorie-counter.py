@@ -10,6 +10,32 @@ foodDatabase = {
 foodList = {}
 
 
+
+def main():
+    while True:
+        res = input('Add a food, (V)iew calories, or type (D)one: ')
+        res = res.capitalize()
+        if res == 'D' or res == 'Done':
+            pprint.pprint(foodList)
+            addTotalCalories(foodList)
+            break
+        elif res == 'V' or res == 'View':
+            pprint.pprint(foodList)
+            addTotalCalories(foodList)
+        elif searchFood(res):
+            getFoodInfo(res)
+            quantity = input('How much: ')
+            if quantity.isdecimal():
+                quantity = int(quantity)
+                addToFoodList(foodList, res, quantity)
+            else:
+                input('Please enter a number: ')
+        else:
+            print('This food does not exist in the database.')
+
+
+
+
 def addUnitItem(item, calories):
     item = item.capitalize()
     foodDatabase['Unit'][item] = calories
@@ -56,24 +82,25 @@ def getFoodInfo(x):
 
 
 
-def addToFoodList(d, x, quantity=1):
+def addToFoodList(foodList, x, quantity=1):
     x = x.capitalize()
     if searchFood(x):
         for unit, food in foodDatabase.items():
             for name in food:
                 if x == name:
                     if quantity > 1:
-                        d[name] = food[name] * quantity
+                        foodList[name] = food[name] * quantity
                     else:
-                        d[name] = food[name]
+                        foodList[name] = food[name]
     else:
         print('This food does not exist in the database.')
 
 
 
 
-def addTotalCalories(d):
-    calories = d.values()
+
+def addTotalCalories(foodList):
+    calories = foodList.values()
     total = sum(calories)
     print('You have consumed {} calories today.'.format(total))
 
@@ -103,3 +130,7 @@ addUnitItem('Egg', 70)
 addUnitItem('Corn', 100)
 addUnitItem('Fruit smoothie', 530)
 addCupItem('Popcorn', 30)
+
+
+if __name__ == '__main__':
+    main()
