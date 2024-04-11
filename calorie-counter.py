@@ -7,7 +7,7 @@ foodDatabase = {
     'T' : {}
 }
 
-foodList1 = {}
+foodList = {}
 
 
 def addUnitItem(item, calories):
