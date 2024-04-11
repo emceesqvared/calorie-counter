@@ -100,6 +100,3 @@ addUnitItem('Egg', 70)
 addUnitItem('Corn', 100)
 addUnitItem('Fruit smoothie', 530)
 addCupItem('Popcorn', 30)
-
-getFoodInfo('egg')
-getFoodInfo('curry')
