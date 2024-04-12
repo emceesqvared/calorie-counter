@@ -96,8 +96,8 @@ def getFoodInfo(x):
         for unit, food in foodDatabase.items():
             for name in food:
                 if x == name:
-                    print(name + ':', food[name], 'calories')
-                    print(name + ' is measured in {}s.'.format(unit.lower()))
+                    print(name + ' is measured in {}s.'.format(unit))
+                    print(food[name], 'calories per {}.'.format(unit))
     else:
         print('This food does not exist in the database.')
 
@@ -147,6 +147,12 @@ addUnitItem('Egg', 70)
 addUnitItem('Corn', 100)
 addUnitItem('Fruit smoothie', 530)
 addCupItem('Popcorn', 30)
+addCupItem('Blueberries', 85)
+addTItem('Sugar', 45)
+addTItem('Powdered sugar', 30)
+addTItem('Brown sugar', 45)
+addUnitItem('Strawberries', 5)
+addCupItem('Pineapple', 80)
 
 
 if __name__ == '__main__':
