@@ -96,7 +96,7 @@ def getFoodInfo(x):
         for unit, food in foodDatabase.items():
             for name in food:
                 if x == name:
-                    print(name + ' is measured in {}s.'.format(unit))
+                    print(name + ': measured in {}s.'.format(unit))
                     print(food[name], 'calories per {}.'.format(unit))
     else:
         print('This food does not exist in the database.')
