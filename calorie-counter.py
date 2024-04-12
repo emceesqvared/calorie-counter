@@ -24,14 +24,35 @@ def main():
             addTotalCalories(foodList)
         elif searchFood(res):
             getFoodInfo(res)
-            quantity = input('How much: ')
-            if quantity.isdecimal():
-                quantity = int(quantity)
-                addToFoodList(foodList, res, quantity)
-            else:
-                input('Please enter a number: ')
+            quantity = input('How much? ')
+            while True:
+                try:
+                    quantity = float(quantity)
+                    addToFoodList(foodList, res, quantity)
+                    break
+                except ValueError:
+                    quantity = input('Please enter a number: ')
         else:
             print('This food does not exist in the database.')
+            ans = input('Would you like to add it to the food list? (Y) or (N): ')
+            while True:
+                if ans.upper() == 'Y':
+                    calories = input('How many calories? ')
+                    while True:
+                        try:                            
+                            calories = float(calories)
+                            foodList[res] = calories
+                            break
+                        except ValueError:
+                            calories = input('Please enter a number: ')
+                    break
+                elif ans.upper() == 'N':
+                    break
+                else:
+                    ans = input('Please enter (Y) or (N): ')
+
+
+
 
 
 
@@ -84,17 +105,13 @@ def getFoodInfo(x):
 
 def addToFoodList(foodList, x, quantity=1):
     x = x.capitalize()
-    if searchFood(x):
-        for unit, food in foodDatabase.items():
-            for name in food:
-                if x == name:
-                    if quantity > 1:
-                        foodList[name] = food[name] * quantity
-                    else:
-                        foodList[name] = food[name]
-    else:
-        print('This food does not exist in the database.')
-
+    for unit, food in foodDatabase.items():
+        for name in food:
+            if x == name:
+                if quantity > 1:
+                    foodList[name] = food[name] * quantity
+                else:
+                    foodList[name] = food[name]
 
 
 
