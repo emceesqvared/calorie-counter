@@ -108,7 +108,7 @@ def addToFoodList(foodList, x, quantity=1):
     for unit, food in foodDatabase.items():
         for name in food:
             if x == name:
-                if quantity > 1:
+                if quantity != 1:
                     foodList[name] = food[name] * quantity
                 else:
                     foodList[name] = food[name]
