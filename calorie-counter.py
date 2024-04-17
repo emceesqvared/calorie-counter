@@ -161,6 +161,8 @@ addCupItem('Pasta', 270)
 addCupItem('Pasta with sauce', 310)
 addUnitItem('Pork chop', 200)
 addUnitItem('Ribs', 95)
+addCupItem('Raisins', 480)
+addTItem('Peanut butter', 90)
 
 if __name__ == '__main__':
     main()
