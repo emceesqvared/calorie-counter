@@ -163,6 +163,8 @@ addUnitItem('Pork chop', 200)
 addUnitItem('Ribs', 95)
 addCupItem('Raisins', 480)
 addTItem('Peanut butter', 90)
+addUnitItem('Banana bread', 300)
+
 
 if __name__ == '__main__':
     main()
