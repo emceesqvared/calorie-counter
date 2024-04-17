@@ -153,7 +153,14 @@ addTItem('Powdered sugar', 30)
 addTItem('Brown sugar', 45)
 addUnitItem('Strawberries', 5)
 addCupItem('Pineapple', 80)
-
+addCupItem('Hummus', 560)
+addUnitItem('Brownie', 200)
+addUnitItem('Apple', 100)
+addCupItem('Artichoke', 60)
+addCupItem('Pasta', 270)
+addCupItem('Pasta with sauce', 310)
+addUnitItem('Pork chop', 200)
+addUnitItem('Ribs', 95)
 
 if __name__ == '__main__':
     main()
