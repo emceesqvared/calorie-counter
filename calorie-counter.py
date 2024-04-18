@@ -41,7 +41,10 @@ def main():
                     while True:
                         try:                            
                             calories = float(calories)
-                            foodList[res] = calories
+                            if res in foodList:
+                                foodList[res] += calories
+                            else:
+                                foodList[res] = calories
                             break
                         except ValueError:
                             calories = input('Please enter a number: ')
@@ -108,10 +111,18 @@ def addToFoodList(foodList, x, quantity=1):
     for unit, food in foodDatabase.items():
         for name in food:
             if x == name:
-                if quantity != 1:
-                    foodList[name] = food[name] * quantity
+                if name in foodList:
+                    if quantity != 1:
+                        foodList[name] += food[name] * quantity
+                    else:
+                        foodList[name] += food[name]
                 else:
-                    foodList[name] = food[name]
+                    if quantity != 1:
+                        foodList[name] = food[name] * quantity
+                    else:
+                        foodList[name] = food[name]
+
+
 
 
 
