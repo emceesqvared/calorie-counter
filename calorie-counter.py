@@ -175,6 +175,9 @@ addUnitItem('Ribs', 95)
 addCupItem('Raisins', 480)
 addTItem('Peanut butter', 90)
 addUnitItem('Banana bread', 300)
+addUnitItem('Bacon', 40)
+addCupItem('Peanuts', 680)
+
 
 
 if __name__ == '__main__':
