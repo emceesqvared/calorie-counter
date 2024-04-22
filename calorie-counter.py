@@ -177,6 +177,9 @@ addTItem('Peanut butter', 90)
 addUnitItem('Banana bread', 300)
 addUnitItem('Bacon', 40)
 addCupItem('Peanuts', 680)
+addCupItem('Potatoes', 110)
+addCupItem('Sweet potatoes', 110)
+addCupItem('Cauliflower', 25)
 
 
 
