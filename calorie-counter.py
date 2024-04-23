@@ -191,6 +191,8 @@ addUnitItem('Asparagus', 3)
 addOzItem('Steak', 60)
 addCupItem('Mashed potatoes', 175)
 addOzItem('Salmon', 60)
+addOzItem('Cheese', 110)
+
 
 
 
