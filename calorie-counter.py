@@ -180,6 +180,17 @@ addCupItem('Peanuts', 680)
 addCupItem('Potatoes', 110)
 addCupItem('Sweet potatoes', 110)
 addCupItem('Cauliflower', 25)
+addCupItem('Watermelon', 45)
+addCupItem('Blackberries', 65)
+addUnitItem('Orange', 70)
+addCupItem('Pineapple', 80)
+addUnitItem('Tangerine', 50)
+addUnitItem('Clementine', 45)
+addCupItem('Green beans', 30)
+addUnitItem('Asparagus', 3)
+addOzItem('Steak', 60)
+addCupItem('Mashed potatoes', 175)
+addOzItem('Salmon', 60)
 
 
 
